@@ -45,9 +45,12 @@ public class saap{
         int[] laddersEnd = {25, 39, 74, 76, 80, 89};
 
         boolean game = true;
+        System.out.print("\npress enter to continue...\n");
         while (game) {
             int turn;
             for (turn = 0; turn < nPlayers; turn++) {
+            scanner.nextLine();
+
                 int dice = roll();
                 System.out.println("Player[" + (turn + 1) + "] rolled a " + dice + " : " + players[turn] + " -> " + (players[turn] + dice));
                 players[turn] = players[turn] + dice;
@@ -71,6 +74,8 @@ public class saap{
                     }
                 }
             }
+
+
 
             board(players, nPlayers);
 
